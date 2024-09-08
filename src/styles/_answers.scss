@@ -27,4 +27,24 @@
             }
         }
     }
+
+    @media (max-width: variables.$mobile) {
+        margin: 32px 0;
+
+        &__form{
+            grid-template-columns: 1fr;
+            gap: 24px;
+
+            &__content{
+
+                &__label{
+                    font-size: 18px;
+                }
+
+                &__input{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }

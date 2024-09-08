@@ -16,6 +16,8 @@
         &__input{
             @include inputAndButton();
             background-color: variables.$inputColor;
+            color: variables.$textColor;
+            width: 160px;
 
             &:focus{
                 outline: none;
@@ -32,6 +34,13 @@
                 background-color: darken(variables.$buttonColor, 10%);
                 color: darken(variables.$headerColor, 10%);
             }
+        }
+    }
+
+    @media (max-width: variables.$mobile) {
+        &__form{
+            width: 100%;
+            text-align: center;
         }
     }
 }
