@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de CEP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Consultador de CEP</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Consultador de CEP</h1>
+        </div>
+    </header>
+    <section class="consult">
+        <div class="container">
+            <form class="consult__form">
+                <input type="text" class="consult__form__input" placeholder="Digite o seu CEP">
+                <button class="consult__form__button" type="submit">Buscar</button>
+            </form>
+        </div>
+    </section>
+    <section class="answers">
+        <div class="container">
+            <form class="answers__form">
+                <div class="answers__form__content">
+                    <label for="lagradouro" class="answers__form__content__label">Logradouro:</label>
+                    <input class="answers__form__content__input" type="text" id="lagradouro" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="bairro" class="answers__form__content__label">Bairro:</label>
+                    <input class="answers__form__content__input" type="text" id="bairro" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="localidade" class="answers__form__content__label">Localidade:</label>
+                    <input class="answers__form__content__input" type="text" id="localidade" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="estado" class="answers__form__content__label">Estado:</label>
+                    <input class="answers__form__content__input" type="text" id="estado" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="regiao" class="answers__form__content__label">Região:</label>
+                    <input class="answers__form__content__input" type="text" id="regiao" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="ddd" class="answers__form__content__label">DDD:</label>
+                    <input class="answers__form__content__input" type="text" id="ddd" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="ibge" class="answers__form__content__label">IBGE:</label>
+                    <input class="answers__form__content__input" type="text" id="ibge" disabled>
+                </div>
+                <div class="answers__form__content">
+                    <label for="siafi" class="answers__form__content__label">Siafi:</label>
+                    <input class="answers__form__content__input" type="text" id="siafi" disabled>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

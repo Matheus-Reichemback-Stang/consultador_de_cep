@@ -1,0 +1,37 @@
+@use './variables.scss';
+
+@mixin inputAndButton() {
+    padding: 8px 6px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+.consult{
+    padding: 8px 0;
+    background-color: variables.$textColor;
+
+    &__form {
+        &__input{
+            @include inputAndButton();
+            background-color: variables.$inputColor;
+
+            &:focus{
+                outline: none;
+            }
+        }
+        &__button{
+            @include inputAndButton();
+            background-color: variables.$buttonColor;
+            color: variables.$headerColor;
+            transition: ease 0.2s;
+            cursor: pointer;
+
+            &:hover{
+                background-color: darken(variables.$buttonColor, 10%);
+                color: darken(variables.$headerColor, 10%);
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@use './variables.scss';
+
+.answers {
+    margin-top: 32px;
+
+    &__form{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+
+        &__content{
+            &__label{
+                display: block;
+                font-size: 24px;
+                font-weight: bold;
+                color: variables.$textColor;
+                margin-bottom: 4px;
+            }
+    
+            &__input{
+                display: block;
+                font-size: 24px;
+                background-color: variables.$inputColor;
+                border: none;
+                padding: 4px;
+                width: 100%;
+            }
+        }
+    }
+}
