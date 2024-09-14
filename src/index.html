@@ -18,17 +18,18 @@
     <section class="consult">
         <div class="container">
             <form class="consult__form">
-                <input class="consult__form__input" type="text" placeholder="Digite o seu CEP" required max="8" min="8">
+                <input id="cep" class="consult__form__input" type="text" placeholder="Digite o seu CEP" required max="8" min="8">
                 <button class="consult__form__button" type="submit">Buscar</button>
             </form>
+            <p id="error" class="consult__error-message"></p>
         </div>
     </section>
     <section class="answers">
         <div class="container">
             <form class="answers__form">
                 <div class="answers__form__content">
-                    <label for="lagradouro" class="answers__form__content__label">Logradouro:</label>
-                    <input class="answers__form__content__input" type="text" id="lagradouro" disabled>
+                    <label for="logradouro" class="answers__form__content__label">Logradouro:</label>
+                    <input class="answers__form__content__input" type="text" id="logradouro" disabled>
                 </div>
                 <div class="answers__form__content">
                     <label for="bairro" class="answers__form__content__label">Bairro:</label>

@@ -8,9 +8,26 @@
     font-weight: bold;
 }
 
+@keyframes error-animation {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .consult{
     padding: 8px 0;
     background-color: variables.$textColor;
+
+    .container{
+        display: flex;
+        align-items: center;
+    }
 
     &__form {
         &__input{
@@ -37,10 +54,28 @@
         }
     }
 
+    &__error-message{
+        display: none;
+        margin-left: 32px;
+        color: variables.$error;
+        font-size: 18px;
+        font-weight: bold;
+        animation: error-animation 3s;
+    }
+
     @media (max-width: variables.$mobile) {
         &__form{
             width: 100%;
             text-align: center;
+        }
+
+        .container{
+            flex-direction: column;
+        }
+
+        &__error-message{
+            margin-left: 0px;
+            margin-top: 8px;
         }
     }
 }
