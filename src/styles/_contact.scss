@@ -1,0 +1,49 @@
+@use './variables.scss';
+
+.contact {
+    max-width: 5%;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__item{
+            list-style: none;
+            position: relative;
+
+            &__link{
+                position: absolute;
+                
+                img{
+                    height: 32px;
+                    transition: ease 0.5s;
+
+                    &:hover{
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: variables.$tablet) {
+        max-width: 20%;
+    }
+
+    @media (max-width: variables.$mobile) {
+        max-width: 40%;
+        &__list {
+            width: 100%;
+            &__item{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
